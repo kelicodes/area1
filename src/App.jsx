@@ -1,16 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
-import Collection from "./Pages/Collection/colection";
-import Product from "./Components/product/product";
-import Footer from "./Components/Footer/Footer";
-import Login from "./Components/Login/Login";
+import Collection from "./Pages/Collection/Colection";
+import Product from "./components/Product/Product";
+import Footer from "./components/Footer/Footer";
+import Login from "./components/Login/Login";
 import Addproducts from "./Pages/Admin/Addpro/Addpro";
 import { ToastContainer } from "react-toastify";
 import { shopcontext } from "./context/Shopcontext";
 import "react-toastify/dist/ReactToastify.css";
-import Adminhome from "./Pages/admin/adminhome/adminhome"
+import Adminhome from "./Pages/Admin/Adminhome/Adminhome"
 import "./App.css";
 
 function App() {

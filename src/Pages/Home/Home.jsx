@@ -1,9 +1,9 @@
-import Hero from "../../Components/Hero/Hero"
-import How from "../../Components/How/How"
-import Featured from "../../Components/Featured/Featured"
+cimport Hero from "../../components/Hero/Hero"
+import How from "../../components/How/How"
+import Featured from "../../components/Featured/Featured"
 import Testimonial from "../../components/Testimonial/Testimonial"
-import Client from "../../components/client/client"
-import Spinner from "../../components/spinner/spinner"
+import Client from "../../components/Client/Client"
+import Spinner from "../../components/Spinner/Spinner"
 import { useState, useEffect } from "react";
 
 import "./Home.css"

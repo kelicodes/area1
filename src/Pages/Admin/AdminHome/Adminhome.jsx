@@ -2,7 +2,7 @@ import { useState,useContext } from "react";
 import Addproducts from "../Addpro/Addpro";
 import Listproducts from "../List/List";
 import "./Adminhome.css";
-import {shopcontext} from "../../../context/shopcontext"
+import {shopcontext} from "../../../context/Shopcontext"
 
 export default function Adminhome() {
   const [activePage, setActivePage] = useState("add");

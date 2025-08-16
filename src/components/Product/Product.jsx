@@ -2,7 +2,7 @@ import "./Product.css";
 import { useState, useEffect, useContext } from 'react';
 import { shopcontext } from "../../context/Shopcontext";
 import { useParams } from 'react-router-dom';
-import Spinner from "../spinner/spinner";
+import Spinner from "../Spinner/Spinner";
 
 export default function Product() {
     const { productid } = useParams();
