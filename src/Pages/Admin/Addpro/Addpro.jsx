@@ -35,7 +35,6 @@ const Addproducts = ({ token }) => {
       const response = await axios.post(
         "https://areaone-4.onrender.com/products/upload",
         formData,
-        { headers: { token } }
       );
 
       if (response.data.success) {

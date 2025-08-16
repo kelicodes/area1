@@ -10,13 +10,10 @@ export default function Listproducts({ token }) {
   // Fetch all products
   const fetchlist = async () => {
     try {
-      const response = await axios.get("https://areaone-4.onrender.com/products/get", {
-        headers: { token },
-      });
+      const response = await axios.get("https://areaone-4.onrender.com/products/get")
 
       if (response.data.success) {
-      	console.log(response)
-        setList(response.data.allproducts || []); // Adjust if backend sends differently
+        setList(response.data.allproducts || []);
       } else {
         toast.error(response.data.message || "Failed to fetch products");
       }
@@ -29,9 +26,8 @@ export default function Listproducts({ token }) {
   const removeproduct = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/products/remove",
-        { id },
-        { headers: { token } }
+        "https://areaone-4.onrender.com/products/remove",
+        { id }
       );
 
       if (response.data.success) {
