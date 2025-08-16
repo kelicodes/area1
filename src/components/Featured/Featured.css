@@ -1,0 +1,46 @@
+.Featured{
+	height: auto;
+}
+.Featured h3{
+	border-bottom: 2px solid var(--primary-color);
+	font-size: clamp(1.8rem, 5vw, 2.5rem);
+	width: 84%;
+}
+.Featured h3 span{
+	color: var(--primary-color);
+}
+
+.Feature{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.feabtn{
+	display: block;
+	margin: 20px auto 0;
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	border: 2px solid var(--accent-color);
+	border-radius: 14px;
+	padding: 0.9rem 1.8rem;
+	cursor: pointer;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.feabtn:hover{
+	 background-color: transparent;
+	 color: var(--neutral-dark);
+}
+
+
+@media(max-width:800px){
+	.Feature{
+		flex-direction: column;
+	}
+}

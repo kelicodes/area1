@@ -1,0 +1,150 @@
+.addproducts { 
+	background-color: var(--accent-color);
+	color: var(--text-dark);
+	padding: 20px;
+	border-radius: 12px;
+	max-width: 800px;
+	margin: auto;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	transition: all 0.3s ease;
+}
+
+.addproducts h2 {
+	text-align: center;
+	color: var(--primary-color);
+	margin-bottom: 20px;
+	font-size: 1.8rem;
+}
+
+/* Image upload styling */
+.images {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.images label {
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.images label:hover {
+	transform: scale(1.05);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.images img {
+	width: 140px;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 2px dashed var(--primary-color);
+	background-color: var(--neutral-light);
+	padding: 5px;
+}
+
+/* Input and select styling */
+.conta p, 
+.category p, 
+.desc p {
+	font-weight: bold;
+	color: var(--text-dark);
+	margin-bottom: 5px;
+}
+
+.conta input, 
+.category select, 
+.desc textarea {
+	padding: 12px 14px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+.conta input:focus, 
+.category select:focus, 
+.desc textarea:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0 0 4px var(--primary-color);
+}
+
+/* Name and Price layout */
+.namepricecontainer {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 15px;
+}
+
+.namepricecontainer .conta {
+	flex: 1;
+}
+
+/* Textarea styling */
+.desc textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+/* Taken checkbox */
+.taken {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 15px 0;
+}
+
+.taken input {
+	accent-color: var(--primary-color);
+	transform: scale(1.2);
+}
+
+/* Submit button */
+.mybtn {
+	display: block;
+	width: 100%;
+	padding: 14px;
+	font-weight: bold;
+	background-color: var(--primary-color);
+	color: var(--text-light);
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mybtn:hover {
+	background-color: #e13e00;
+	transform: scale(1.02);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+	.namepricecontainer {
+		flex-direction: column;
+	}
+
+	.images img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.desc textarea {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.addproducts {
+		padding: 15px;
+	}
+
+	.images img {
+		width: 100px;
+		height: 100px;
+	}
+}

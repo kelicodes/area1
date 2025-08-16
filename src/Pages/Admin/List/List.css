@@ -1,0 +1,119 @@
+/* Listproducts.css */
+.list{
+  padding-top: 70px;
+}
+h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #f4f4f4;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.head p {
+  margin: 0;
+  text-align: center;
+}
+
+.houses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.houses > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.houses > div:hover {
+  transform: translateY(-2px);
+}
+
+.houses img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.houses p {
+  margin: 0;
+  text-align: center;
+}
+
+.houses p:last-child {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.houses p:last-child:hover {
+  color: darkred;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .head {
+    display: none; /* Hide table headers on small screens */
+  }
+
+  .houses > div {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 0.5rem;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .houses img {
+    grid-row: span 4;
+    width: 80px;
+    height: 80px;
+  }
+
+  .houses p {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  .houses p:last-child {
+    justify-self: end;
+    color: red;
+  }
+}
+
+/* 📱 Extra small screens */
+@media (max-width: 480px) {
+  .houses > div {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .houses img {
+    width: 70px;
+    height: 70px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}

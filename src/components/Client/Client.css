@@ -1,0 +1,67 @@
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding: 2rem;
+  background-color: var(--accent-color);
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.client h3 {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: bolder;
+}
+
+.client p {
+  color: var(--neutral-dark);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: bold;
+}
+
+.client p span {
+  color: var(--primary-color);
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 1rem;
+}
+
+.phone input {
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.phone input:focus {
+  border-color: var(--neutral-dark);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.sub {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: 2px solid var(--accent-color);
+  border-radius: 14px;
+  padding: clamp(0.5rem, 0.4rem + 0.5vw, 0.8rem) clamp(1rem, 0.8rem + 1vw, 1.7rem);
+  cursor: pointer;
+  font-size: clamp(0.9rem, 0.8rem + 1vw, 1.2rem);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sub:hover {
+  background-color: var(--neutral-dark);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}

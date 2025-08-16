@@ -1,0 +1,81 @@
+.Testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.Testimonial h3 {
+  font-weight: bolder;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.mytestimonial {
+  width: 80%;
+  max-width: 700px;
+  border: 2px solid var(--primary-color);
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.mytestimonial .left {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mytestimonial .left p{
+	padding: 0px 0px;
+	margin: 0px 0px;
+	font-size: clamp(1rem, 3vw, 1.25rem);
+	color: var(--primary-color);
+	font-weight: bolder;
+}
+
+.right p{
+	font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.mytestimonial .left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.mytestimonial .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: var(--primary-color);
+}
