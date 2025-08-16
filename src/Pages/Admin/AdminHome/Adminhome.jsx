@@ -10,7 +10,7 @@ export default function Adminhome() {
 
   return (
     <div className="adminhome">
-      {/* Sidebar */}
+      
       <aside className="admin-sidebar">
         <h2>Admin Panel</h2>
         <nav>

@@ -1,6 +1,7 @@
 import "./Login.css"
 import { useState, useContext ,useEffect} from 'react'
 import {shopcontext} from "../../context/Shopcontext"
+import useNaviage from 'react-router-dom'
 import axios from "axios"
 import { toast } from "react-toastify"
 import.meta.env.VITE_API_URL
@@ -16,10 +17,10 @@ const [email,setEmail]=useState('')
 const [password,setPassword]=useState('')
 const {setToken}=useContext(shopcontext)
 
+const navigate=useNavigate()
+
 const submithandler = async (e) => {
 
-  // const API_URL=import.meta.env.VITE_API_URL
-  // console.log(API_URL)
   e.preventDefault();
   try {
     let endpoint = "";
@@ -42,13 +43,13 @@ const submithandler = async (e) => {
     if (response.data.success) {
       setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
-      localStorage.setItem("role", response.data.role); // ✅ store role
+      localStorage.setItem("role", response.data.role); 
       toast.success("Login successful");
 
       if (response.data.role === "admin") {
-        window.location.href = "/admin"; // redirect
+        navigate("/admin") 
       } else {
-        window.location.href = "/";
+        navigate("/");
       }
     } else {
       toast.error(response.data.message);
