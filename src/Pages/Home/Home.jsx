@@ -1,4 +1,4 @@
-cimport Hero from "../../components/Hero/Hero"
+import Hero from "../../components/Hero/Hero"
 import How from "../../components/How/How"
 import Featured from "../../components/Featured/Featured"
 import Testimonial from "../../components/Testimonial/Testimonial"
