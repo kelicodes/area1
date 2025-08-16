@@ -7,7 +7,7 @@ export const shopcontext = createContext();
 
 const ShopContextProvider = (props) => {
   const [products, setProducts] = useState([]);
-  const [token, setToken] = useState(localStorage.getItem("token" || ""));
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
 const [loadingProducts, setLoadingProducts] = useState(true);
 
 const fetchmongopro = async () => {

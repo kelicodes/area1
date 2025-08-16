@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import { shopcontext } from "./context/Shopcontext";
 import "react-toastify/dist/ReactToastify.css";
 import Adminhome from "./Pages/Admin/AdminHome/Adminhome"
+import Protected from "./components/Protected/Protected"
 import "./App.css";
 
 function App() {
@@ -26,15 +27,13 @@ function App() {
           <Route path="/collection/:productid" element={<Product />} />
           <Route path="/login" element={<Login />} />
 
-          {/* ✅ Admin-protected Addproducts route */}
+          {/*  Admin-protected Addproducts route */}
           <Route
             path="/admin"
             element={
-              localStorage.getItem("role") === "admin" ? (
-                <Adminhome token={token} />
-              ) : (
-                <Navigate to="/login" replace />
-              )
+              <Protected role="admin">
+                <Adminhome />
+              </Protected>
             }
           />
         </Routes>
