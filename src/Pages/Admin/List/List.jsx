@@ -10,7 +10,7 @@ export default function Listproducts({ token }) {
   // Fetch all products
   const fetchlist = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/products/get", {
+      const response = await axios.get("https://areaone-4.onrender.com/products/get", {
         headers: { token },
       });
 

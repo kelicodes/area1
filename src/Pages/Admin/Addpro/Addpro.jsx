@@ -33,7 +33,7 @@ const Addproducts = ({ token }) => {
       if (image3) formData.append("image3", image3);
 
       const response = await axios.post(
-        "http://localhost:3000/products/upload",
+        "https://areaone-4.onrender.com/products/upload",
         formData,
         { headers: { token } }
       );
