@@ -1,10 +1,10 @@
 import "./Login.css"
 import { useState, useContext ,useEffect} from 'react'
 import {shopcontext} from "../../context/Shopcontext"
-import useNaviage from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { toast } from "react-toastify"
-import.meta.env.VITE_API_URL
+
 
 
 
