@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from 'react'; 
 import "./Collection.css";
-import Card from "../../components/card/card";
+import Card from "../../components/Card/Card";
 import { shopcontext } from "../../context/Shopcontext"; 
-import Spinner from "../../components/spinner/spinner";
+import Spinner from "../../components/Spinner/Spinner";
 
 export default function Collection() {
   const { products, loadingProducts } = useContext(shopcontext);
