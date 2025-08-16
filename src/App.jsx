@@ -10,7 +10,7 @@ import Addproducts from "./Pages/Admin/Addpro/Addpro";
 import { ToastContainer } from "react-toastify";
 import { shopcontext } from "./context/Shopcontext";
 import "react-toastify/dist/ReactToastify.css";
-import Adminhome from "./Pages/Admin/Adminhome/Adminhome"
+import Adminhome from "./Pages/Admin/AdminHome/Adminhome"
 import "./App.css";
 
 function App() {
